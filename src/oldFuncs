@@ -1,0 +1,74 @@
+//    public List<String> newBridgeWords(List<String> inputWords){
+//        List<String> newInput = new ArrayList<String>(inputWords); // deepcopy
+//        for (int i = 1; i < inputWords.size(); i++) {
+//            int count = 0; //判断图中是否有该两个词的节点
+//            graphNode nodeN1 = null;
+//            graphNode nodeN2 = null;
+//            for(graphNode s : nodes)
+//            {
+//                if (Objects.equals(s.node, inputWords.get(i - 1))) {
+//                    nodeN1 = s;
+//                    count++;
+//                }
+//                else if (Objects.equals(s.node, inputWords.get(i))) {
+//                    nodeN2 = s;
+//                    count++;
+//                }
+//                if (count == 2) {
+//                    List<String> pathN1 = new ArrayList<>();
+//                    List<String> result = new ArrayList<>();
+//                    pathN1.add(nodeN1.node);
+//                    result = FindPaths(nodeN1, nodeN2, pathN1);
+//                    result = result.subList(1, result.size()-1);
+//                    System.out.println(result.toString());
+//                    if(result.size() > 0)
+//                    {
+//                        if (result.size() > 1)
+//                        {
+//                            int randomIndex = (int) (Math.random() * result.size());
+//                            newInput.add("1" + result.get(randomIndex));
+//                        }
+//                        else
+//                        {
+//                            newInput.add("2" + result.get(0));
+//                        }
+//                    }
+//                    break;
+//                }
+//            }
+//        }
+//        return newInput;
+//    }
+
+
+
+
+
+//    public List<String> FindPaths(graphNode node1, graphNode node2, List<String> path){ // 深度优先找寻路径
+//        for(graphNode s : node1.right)
+//        {
+//            int flag = 1;
+//            for (String s1 : path)
+//            {
+//                if (Objects.equals(s.node, s1)) {
+//                    flag = 0;
+//                    break;
+//                }
+//            }
+//            if (flag == 1)
+//            {
+//                List<String> path1 = new ArrayList<String>(path);
+//                path1.add(s.node);
+//                List<String> result = FindPaths(s, node2, path1);
+//                if(result != null)
+//                {
+//                    return result;
+//                }
+//            }
+//        }
+//        if(node1.equals(node2))
+//        {
+//            return path;
+//        }
+//        else return null;
+//    }
