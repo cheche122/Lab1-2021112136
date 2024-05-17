@@ -8,7 +8,7 @@ import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.view.mxGraph;
 import javax.swing.*;
 import java.util.Scanner;
-
+//这是一个炫酷的代码
 public class lab1 {
     public lab1(){
 
