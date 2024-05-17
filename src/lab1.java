@@ -153,17 +153,17 @@ public class lab1 {
             // 6
             System.out.println("执行随机游走：");
             int randomIndex = (int) (Math.random() * g.nodes.size());
-            graphNode start = g.nodes.get(randomIndex);
-            List<List<String>> path6 = new ArrayList<>();
-            g.mission6(start, path6);
-            System.out.println(path6.toString());
+//            graphNode start = g.nodes.get(randomIndex);
+//            List<List<String>> path6 = new ArrayList<>();
+//            g.mission6(start, path6);
+//            System.out.println(path6.toString());
 
-//            for (int i = 0; i < 100; i++) {
-//                graphNode start = g.nodes.get(0);
-//                List<List<String>> path6 = new ArrayList<>();
-//                g.mission6(start, path6);
-//                System.out.println(path6.toString());
-//            }
+            for (int i = 0; i < 100; i++) {
+                graphNode start = g.nodes.get(0);
+                List<List<String>> path6 = new ArrayList<>();
+                g.mission6(start, path6);
+                System.out.println(path6.toString());
+            }
         }
         catch (IOException e) {
             System.out.print("Exception");
