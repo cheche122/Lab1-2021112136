@@ -148,8 +148,7 @@ public class graph {
                 path1.add(s.node);
                 List<String> result = FindPaths(s, node2, path1, paths);
                 if(result != null)
-                {
-                    paths.add(result);
+                {paths.add(result);
                 }
             }
         }
@@ -193,25 +192,17 @@ public class graph {
 
                         }
                     }
-//                    result = pathsTofill.get(0); // 因为要求bridge word任选一个， 因此只选择一个路径进行随机bridge word选取
-//                    result = result.subList(1, result.size()-1);
-//                    System.out.println("----");
-//                    System.out.println(result.toString());
-//                    System.out.println("----");
+
                     if(result.size() > 0)
                     {
                         if (result.size() > 1)
                         {
                             int randomIndex = (int) (Math.random() * result.size());
-//                            newInput.add("Pos" + Integer.toString(i) + "_" + result.get(randomIndex) + "_" + "Type1");
-                            //System.out.println("插入Type1");
                             newInput.add(i+insCount, result.get(randomIndex));
                             insCount++;
                         }
                         else
                         {
-//                            newInput.add("Pos" + Integer.toString(i) + "_" + result.get(0) + "_" + "Type2");
-                            //System.out.println("插入Type2");
                             newInput.add(i+insCount, result.get(0));
                             insCount++;
                         }
@@ -272,49 +263,7 @@ public class graph {
 
     }
 
-//    public void mission6(graphNode start, List<String> path){
-//        if (!start.right.isEmpty())
-//        {
-//            int randomIndex = (int) (Math.random() * start.right.size());
-//            int flag = 1;
-//            for (String s : path)
-//            {
-//                if (s.equals(start.right.get(randomIndex).node)) {
-//                    flag = 0;
-//                    break;
-//                }
-//            }
-//            if (flag == 1)
-//            {
-//                path.add(start.right.get(randomIndex).node);
-//                mission6(start.right.get(randomIndex), path);
-//            }
-//            else {
-//                path.add(start.right.get(randomIndex).node);
-//                path.add(start.right.get(randomIndex).node);
-//            }
-//        }
-////        int randomIndex = (int) (Math.random() * start.right.size());
-////        int flag = 1;
-////        for (String s : path)
-////        {
-////            if (s.equals(start.right.get(randomIndex).node)) {
-////                flag = 0;
-////                break;
-////            }
-////        }
-////        if (flag == 1)
-////        {
-////            path.add(start.right.get(randomIndex).node);
-////            mission6(start.right.get(randomIndex), path);
-////        }
-//
-////        for (graphNode right : nodes.get(startIndex).right)
-////        {
-////
-////        }
-//    }
-    public void mission6(graphNode start, List<List<String>> path){
+    public List<List<String>> mission6(graphNode start, List<List<String>> path){
 
         if (!start.right.isEmpty())
         {
@@ -348,25 +297,9 @@ public class graph {
             }
 
         }
+        return path;
 
-//        int randomIndex = (int) (Math.random() * start.right.size());
-//        int flag = 1;
-//        for (String s : path)
-//        {
-//            if (s.equals(start.right.get(randomIndex).node)) {
-//                flag = 0;
-//                break;
-//            }
-//        }
-//        if (flag == 1)
-//        {
-//            path.add(start.right.get(randomIndex).node);
-//            mission6(start.right.get(randomIndex), path);
-//        }
 
-//        for (graphNode right : nodes.get(startIndex).right)
-//        {
-//
-//        }
+
     }
 }

@@ -12,11 +12,18 @@ public class lab1 {
     public  static String start1 ;
     public  static String end1;
 
-    public void second(){}
+
     public static graph g=new graph();
+    public  static graphNode start_;
+    public graphNode get11node;
+
+    public static  List<List<String>> path16 = new ArrayList<>();
 
 
-    public static List<List<String>> second(String start1, String end1) {
+
+
+    public static List<List<String>> second(String start1, String end1)
+    {
 
         lab1 obj = new lab1();
         List<String> preGraph;
@@ -24,6 +31,7 @@ public class lab1 {
         //graph g = new graph();
         try {
             String str = Files.readString(Paths.get("C:\\Users\\22918\\Desktop\\Lab1\\src\\main\\java\\teststr"));
+
             preGraph = obj.stringset(str);
             set = obj.tokens(preGraph);
 
@@ -81,10 +89,7 @@ public class lab1 {
                     }
                 }
             }
-//            for (graphNode m : g.nodes) {
-//                System.out.println(m.toString());
-//                System.out.println(m.right.toString());
-//            }
+//
             List<String> path = new ArrayList<>();
        //     List<List<String>> paths = new ArrayList<>(); // 两点间的所有路径
 
@@ -96,7 +101,8 @@ public class lab1 {
 //            graphNode nn = new graphNode("111"); // 不可达点测试
 //            g.nodes.add(nn);
             g.FindPaths(g.nodes.get(num1), g.nodes.get(num2), path, paths); // 举例： 0是起点， 3是终点
-
+            System.out.println(paths.toString());
+            System.out.println("_____________________-");
             List<List<List<String>>> wordAllpaths = new ArrayList<>(); // 按照结尾单词分开所有的路径
             for (graphNode m : g.nodes) {
                 List<String> Mission5path = new ArrayList<>();
@@ -170,23 +176,18 @@ public class lab1 {
             System.out.println("执行随机游走：");
             int randomIndex = (int) (Math.random() * g.nodes.size());
             graphNode start = g.nodes.get(randomIndex);
+
             List<List<String>> path6 = new ArrayList<>();
             g.mission6(start, path6);
             g.displayGraph5(path6);
             System.out.println(path6.toString());
 
-//            for (int i = 0; i < 100; i++) {
-//                graphNode start = g.nodes.get(0);
-//                List<List<String>> path6 = new ArrayList<>();
-//                g.mission6(start, path6);
-//                System.out.println(path6.toString());
-//            }
         } catch (IOException _) {
             System.out.print("Exception");
         }
         List<List<String>> a= new ArrayList<>();
         a=paths;
-paths=new ArrayList<>();
+     paths=new ArrayList<>();
 
         return a;
     }
