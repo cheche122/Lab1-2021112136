@@ -16,10 +16,13 @@
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
+<<<<<<< HEAD
     <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="https://maven.aliyun.com/repository/public" />
     </remote-repository>
+=======
+>>>>>>> 34f596627da7b60ba8ddb24a8e30e22cc934ee66
   </component>
 </project>
